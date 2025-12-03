@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Finguru AI</title>
+    <link rel="manifest" href="/assets/manifest-BYYxHR_1.json">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+      /* Custom scrollbar for webkit */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #1f2937; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #4b5563; 
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #6b7280; 
+      }
+      
+      /* PWA Scroll Fix for iOS */
+      html, body {
+        height: 100%;
+        overflow: hidden; /* Prevent body scroll */
+        overscroll-behavior-y: none;
+        background-color: #111827; /* gray-900 */
+        color: #f3f4f6; /* gray-100 */
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      #root {
+        height: 100%;
+        overflow-y: auto; /* Scroll inside root */
+        -webkit-overflow-scrolling: touch; /* Smooth scroll on iOS */
+      }
+      
+      /* Animations */
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      .animate-fade-in {
+        animation: fadeIn 0.5s ease-out forwards;
+      }
+
+      @keyframes slideUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-slide-up {
+        animation: slideUp 0.4s ease-out forwards;
+      }
+
+      @keyframes bounceIn {
+        0% { transform: scale(0.9); opacity: 0; }
+        70% { transform: scale(1.05); opacity: 1; }
+        100% { transform: scale(1); }
+      }
+      .animate-bounce-in {
+        animation: bounceIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+      }
+
+      @keyframes ping {
+        75%, 100% {
+          transform: scale(2);
+          opacity: 0;
+        }
+      }
+      .animate-ping {
+        animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+      }
+      
+      /* Liquid Wave Animation */
+      .wave {
+        position: absolute;
+        left: 50%;
+        width: 200%;
+        aspect-ratio: 1;
+        border-radius: 38%;
+        background-color: #10b981;
+        animation: rotate 10s linear infinite;
+        transform: translateX(-50%) rotate(0deg);
+        z-index: 0;
+        pointer-events: none;
+      }
+      
+      @keyframes rotate {
+        from { transform: translateX(-50%) rotate(0deg); }
+        to { transform: translateX(-50%) rotate(360deg); }
+      }
+    </style>
+
+<link rel="stylesheet" href="/index.css">
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "recharts": "https://aistudiocdn.com/recharts@^3.4.1",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "firebase/app": "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js",
+    "firebase/auth": "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js",
+    "firebase/firestore": "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js",
+    "firebase/analytics": "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js",
+    "firebase/messaging": "https://www.gstatic.com/firebasejs/10.8.0/firebase-messaging.js",
+    "firebase/": "https://aistudiocdn.com/firebase@^12.6.0/"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/assets/index-CHXtmu25.js"></script>
+</head>
+  <body>
+    <div id="root"></div>
+</body>
+</html>
